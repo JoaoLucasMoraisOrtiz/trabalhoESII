@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    O arquivo pom.xml é o arquivo de configuração principal de projetos Maven.
+    Ele define informações do projeto, dependências, plugins e configurações de build.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!-- modelVersion: versão do modelo POM utilizada -->
+    <modelVersion>4.0.0</modelVersion>
+    
+    <!-- parent: define um projeto pai, herdando configurações e dependências -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.4.4</version>
+    </parent>
+    
+    <!-- groupId: identifica de forma única o grupo/empresa do projeto -->
+    <groupId>com.example</groupId>
+    <!-- artifactId: nome do artefato (jar/war) gerado -->
+    <artifactId>myproject</artifactId>
+    <!-- version: versão do projeto -->
+    <version>0.0.1-SNAPSHOT</version>
+    <!-- name: nome legível do projeto -->
+    <name>spring-boot-starter-parent</name>
+    <!-- description: breve descrição do projeto -->
+    <description>Demo project for Spring Boot</description>
+    <!-- url: URL do projeto (opcional) -->
+    <url/>
+    
+    <!-- licenses: informações sobre a licença do projeto -->
+    <licenses>
+        <license/>
+    </licenses>
+    
+    <!-- developers: lista de desenvolvedores do projeto -->
+    <developers>
+        <developer/>
+    </developers>
+    
+    <!-- scm: informações de controle de versão (ex: Git) -->
+    <scm>
+        <connection/>
+        <developerConnection/>
+        <tag/>
+        <url/>
+    </scm>
+    
+    <!-- properties: propriedades customizadas, como a versão do Java -->
+    <properties>
+        <java.version>21</java.version>
+    </properties>
+    
+    <!-- dependencies: lista de dependências necessárias para o projeto -->
+    <dependencies>
+        <!-- Dependência principal do Spring Boot -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <!-- Dependência para testes com Spring Boot -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+
+        <!-- Dependência para trabalhar com JPA -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <!-- Dependência para trabalhar com PostgreSQL no spring -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+		<!-- Dependência para o Spring Web -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+        <!-- Dependência para enviar emails -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
+    </dependencies>
+
+    <!-- build: configurações de build do projeto -->
+    <build>
+        <plugins>
+            <!-- plugins: ferramentas que adicionam funcionalidades ao build -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
